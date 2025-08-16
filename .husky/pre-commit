@@ -9,3 +9,5 @@ echo "\n\n 🪄  \e[1;34mFormateando código...\e[0m\n"
 pnpm prettier:format
 
 pnpm prettier:check
+
+git add .
