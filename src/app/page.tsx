@@ -1,3 +1,4 @@
+import RootLayout from '~/layout/DefaultLayout';
 export default function Home() {
-  return <div>ola</div>;
+  return <RootLayout>ola</RootLayout>;
 }
