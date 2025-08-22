@@ -1,7 +1,7 @@
-import Navbar from '~/components/organism/Navbar';
+import Navbar from '~/components/organisms/Navbar';
 import { ThemeProviderCustom } from '~/context/ThemeContext';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function DefaultLayout({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProviderCustom>
       <Navbar />

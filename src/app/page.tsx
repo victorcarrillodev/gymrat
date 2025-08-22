@@ -1,4 +1,10 @@
-import RootLayout from '~/layout/DefaultLayout';
+import { Text } from '~/components/atoms/dataDisplay/Text/Text';
+import DefaultLayout from '~/components/templates/layout/DefaultLayout';
+
 export default function Home() {
-  return <RootLayout>ola</RootLayout>;
+  return (
+    <DefaultLayout>
+      <Text>ola</Text>
+    </DefaultLayout>
+  );
 }

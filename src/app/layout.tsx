@@ -1,6 +1,6 @@
 import { CssBaseline } from '@mui/material';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { GlobalCssPriority } from '~/components/Material/MaterialCacheLayout';
+import { GlobalCssPriority } from '~/components/organisms/Material/MaterialCacheLayout';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
