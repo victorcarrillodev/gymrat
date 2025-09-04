@@ -1,0 +1,13 @@
+@use 'variables' as var;
+
+@mixin respond-to($breakpoint) {
+  $size: map-get(var.$breakpoints, $breakpoint);
+
+  @if $size {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint `#{$breakpoint}` no existe en $breakpoints.";
+  }
+}

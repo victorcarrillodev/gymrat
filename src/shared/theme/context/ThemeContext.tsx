@@ -1,7 +1,7 @@
 'use client';
 import { ThemeProvider, CssBaseline, GlobalStyles } from '@mui/material';
-import { darkTheme } from '~/theme/darkTheme';
-import { lightTheme } from '~/theme/lightTheme';
+import { darkTheme } from '~/shared/theme/darkTheme';
+import { lightTheme } from '~/shared/theme/lightTheme';
 import React, { createContext, useContext, useState } from 'react';
 
 type ThemeMode = 'light' | 'dark';
@@ -20,7 +20,7 @@ export const useThemeContext = () => {
 };
 
 export const ThemeProviderCustom = ({ children }: { children: React.ReactNode }) => {
-  const [mode, setMode] = useState<ThemeMode>('dark');
+  const [mode, setMode] = useState<ThemeMode>('light');
 
   const toggleTheme = () => setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
 

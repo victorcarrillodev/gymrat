@@ -1,0 +1,25 @@
+@use '/src/shared/styles/abstracts/mixins' as mix;
+
+.title {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  position: relative;
+  text-transform: capitalize;
+  &::after {
+    background-color: #feea00;
+    content: '';
+    height: 0.5rem;
+    top: 100%;
+    position: absolute;
+
+    // responsive
+    @include mix.respond-to(xs) {
+      width: 30%;
+    }
+    @include mix.respond-to(md) {
+      width: 10%;
+    }
+  }
+}

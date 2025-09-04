@@ -1,4 +1,4 @@
-import { Button } from '../atoms/inputs/Button/Button';
+import { Button } from '../../shared/components/Button/Button';
 
 export default function Home() {
   return (

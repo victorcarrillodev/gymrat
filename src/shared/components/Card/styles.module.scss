@@ -1,0 +1,60 @@
+@use '/src/shared/styles/abstracts/variables' as var;
+@use '/src/shared/styles/abstracts/mixins' as mix;
+
+.exercise-card {
+  align-items: flex-end;
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: 150%;
+  }
+  border-radius: var.$border-radius;
+  display: flex;
+  margin: 0.2rem;
+  position: relative;
+  transition: background-size 0.5s;
+
+  &__data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-radius: 0 0 1rem 1rem;
+    background-image: linear-gradient(#00000000, #00000066, #000000cc, #000000);
+
+    &__title {
+      color: white;
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+    }
+  }
+  &__button {
+    border: 2px solid var(--variant-textColor) {
+      radius: 50px;
+    }
+    margin: 2rem 0;
+    padding: 1rem 3rem;
+  }
+  // hover transition
+  &:hover {
+    background-size: 155%;
+  }
+  // responsive sizes
+  @include mix.respond-to(xs) {
+    width: 70vw;
+    height: 80vh;
+  }
+  @include mix.respond-to(md) {
+    width: 40vw;
+    height: 60vh;
+  }
+  @include mix.respond-to(lg) {
+    width: 30vw;
+    height: 80vh;
+  }
+}
