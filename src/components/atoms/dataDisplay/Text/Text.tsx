@@ -1,12 +1,12 @@
 import { Typography } from '@mui/material';
+import clsx from 'clsx';
 
-import styles from './styles.module.scss';
 import { TextProps } from './types';
 
 export const Text: React.FC<TextProps> = (props) => {
-  const { children, ...rest } = props;
+  const { children, className, ...rest } = props;
   return (
-    <Typography {...rest} className={styles.background}>
+    <Typography {...rest} className={clsx('my_class', className)}>
       {children}
     </Typography>
   );

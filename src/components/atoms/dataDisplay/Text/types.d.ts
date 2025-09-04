@@ -21,4 +21,5 @@ export interface TextProps {
     | 'overline'
     | 'subtitle1'
     | 'subtitle2';
+  className?: ClassValue; // acepta string | string[] | object (lo que clsx soporta)
 }

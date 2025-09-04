@@ -16,4 +16,5 @@ export interface ButtonProps {
   startIcon?: React.ReactNode;
   sx?: React.CSSProperties;
   variant?: 'contained' | 'outlined' | 'text';
+  onClick?: () => void;
 }
