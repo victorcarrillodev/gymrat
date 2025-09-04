@@ -1,19 +1,24 @@
-// eslint.config.js
-import js from '@eslint/js';
+// eslint.config.mjs
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import importHelpers from 'eslint-plugin-import-helpers';
 
+// Obtener __dirname en módulo ES
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
 export default [
   {
     ignores: ['*.config.*', '.next', 'node_modules'],
   },
-  ...new FlatCompat({
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all,
-    baseDirectory: process.cwd(),
-  }).extends(
+  ...compat.extends(
     'next/core-web-vitals',
     'next/typescript',
     'plugin:@typescript-eslint/recommended',
