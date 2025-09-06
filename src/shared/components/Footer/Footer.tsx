@@ -7,7 +7,6 @@ export default function Footer() {
     // main footer
     <Box component="footer" className={styles.footer}>
       <div>
-        <p>GymRat</p>
         <br />
         <br />
         <div>

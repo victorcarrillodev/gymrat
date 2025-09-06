@@ -1,0 +1,105 @@
+@use '../shared/styles/abstracts/variables' as var;
+@use '../shared/styles/abstracts/mixins' as mix;
+
+.banner {
+  align-items: center;
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/homepage/1.png');
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  justify-content: space-around;
+
+  &__title {
+    color: white;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: white;
+    text-align: center;
+    font-size: clamp(0.8rem, 5vw, 2rem);
+    margin-top: 3rem;
+  }
+}
+
+// sección exercise con grid
+.exercise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var.$padding-page;
+
+  &__cards {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+
+    // mobile → 1 columna
+    grid-template-columns: 1fr;
+
+    // tablet
+    @include mix.respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // desktop mediano
+    @include mix.respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // desktop grande
+    @include mix.respond-to(xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+.blog {
+  padding: var.$padding-page;
+
+  &__cards {
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: 1fr;
+    @include mix.respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // desktop mediano
+    @include mix.respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // desktop grande
+    @include mix.respond-to(xl) {
+      grid-template-columns: repeat(3, 1fr);
+
+      :last-child {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+.second-banner {
+  padding: var.$padding-page;
+
+  &__container-img {
+    height: 80vh;
+    color: white;
+    background: {
+      image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/homepage/1.png');
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+    .data {
+      background-color: red;
+    }
+  }
+}

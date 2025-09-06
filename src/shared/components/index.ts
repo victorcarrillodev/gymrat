@@ -1,3 +1,5 @@
-import ExerciseCard from './Card/ExerciseCard';
+import { Button } from './Button/Button';
+import { Text } from './Text/Text';
+import Title from './Title/Title';
 
-export default ExerciseCard;
+export { Button, Text, Title };

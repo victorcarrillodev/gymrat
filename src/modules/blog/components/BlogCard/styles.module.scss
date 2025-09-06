@@ -1,0 +1,36 @@
+.blog-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  overflow: hidden;
+  position: relative;
+
+  &__img-wrapper {
+    height: 45%;
+    position: relative;
+    width: 100%;
+
+    &__img {
+      object-fit: cover; // que no se deforme
+    }
+  }
+
+  &__data {
+    background-color: rgb(160, 163, 168);
+    height: 55%;
+    padding: 2rem;
+
+    &-header {
+    }
+
+    &-body {
+      padding-top: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; // ajusta el número según la altura y font-size
+      -webkit-box-orient: vertical; // añade los tres puntos ...// añade los tres puntos ...
+    }
+  }
+}
