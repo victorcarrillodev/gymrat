@@ -50,7 +50,7 @@ export default function HomePage() {
       {/* section */}
       <Box className={styles['second-banner']} sx={{ bgcolor: 'primary.main' }}>
         <div className={styles['second-banner__container-img']}>
-          <div className={styles['second-banner__container-img'] + ' data'}>
+          <div className={styles['second-banner__container-img-data'] + ' data'}>
             <Text variant="h4">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque perferendis veniam illo assumenda dolorum alias quisquam
               facere atque adipisci laudantium.
